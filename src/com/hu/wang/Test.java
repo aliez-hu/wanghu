@@ -1,11 +1,15 @@
 package com.hu.wang;
 
+import java.time.LocalDateTime;
+
 /**
  * @author hwang30
  * @date 2024/6/5 14:48
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("测试代码提交");
+        LocalDateTime localDateTime= LocalDateTime.now();
+        String str = String.valueOf(localDateTime).replace("-","").replace("T","").replace(":","").replace(".","");
+        System.out.println("微秒时间戳："+str);
     }
 }
